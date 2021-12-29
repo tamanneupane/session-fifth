@@ -1,6 +1,7 @@
 package day1;
 
 public class Welcome {
+
     public static void main(String[] args) {
         String greeting = "day1.Welcome to Core Java!";
         System.out.println(greeting);
@@ -9,4 +10,5 @@ public class Welcome {
         }
         System.out.println();
     }
+
 }
