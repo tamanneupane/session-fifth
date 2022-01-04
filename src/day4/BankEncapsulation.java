@@ -10,6 +10,7 @@ public class BankEncapsulation {
         //TODO : Need to replace this set Account Balance As well
         account1.deposit(account1, 500);
 
+
         Account account2 = new Account();
         account2.setAccountNumber("2");
         account2.setAccountHolderName("Ram");

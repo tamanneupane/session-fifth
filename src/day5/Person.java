@@ -3,7 +3,7 @@ package day5;
 public class Person {
 
     private String name;
-    private short age;
+    private int age;
 
     public String getName() {
         return name;
@@ -13,11 +13,11 @@ public class Person {
         this.name = name;
     }
 
-    public short getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(short age) {
+    public void setAge(int age) {
         this.age = age;
     }
 }

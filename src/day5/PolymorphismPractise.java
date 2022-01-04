@@ -7,7 +7,7 @@ public class PolymorphismPractise {
 
         person = new Student();
         person.setName("ABC");
-        person.setAge((short) 12);
+        person.setAge(12);
         ((Student)person).setStudentClass(6);
 
         person = new Teacher();
