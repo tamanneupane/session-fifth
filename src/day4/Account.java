@@ -1,8 +1,12 @@
 package day4;
 
+import java.util.logging.Logger;
+
+//src:day4.*
+
 public class Account {
 
-    private final float INTEREST_RATE = 0.05f;
+    public static final float INTEREST_RATE = 0.05f;
 
     // accountNumber
     // accountHolderName
@@ -37,25 +41,27 @@ public class Account {
     }
 
     // deposit
-    public void deposit(Account account, double amount){
+    public void deposit(double amount){
+        Logger.getGlobal().info(this.accountHolderName);
+        Logger.getGlobal().info(this.accountNumber);
         this.accountBalance += amount;
     }
 
 
     // transferBalance
-    public  void transferBalance(Account fromAccount ,Account toAccount , double amountToBeTransferred){
+    public void transferBalance(Account fromAccount , double amountToBeTransferred){
         //TODO check if sufficient balance to be transferred is available or not
         fromAccount.setAccountBalance(fromAccount.getAccountBalance() - amountToBeTransferred);
-        toAccount.setAccountBalance(toAccount.getAccountBalance() + amountToBeTransferred);
+        this.setAccountBalance(this.getAccountBalance() + amountToBeTransferred);
     }
 
     // addInterest
-    public void addInterest(Account account){
-        double interest = (account.getAccountBalance() * 1 * INTEREST_RATE);
-        System.out.println("Principal Amount : " + account.getAccountBalance());
-        System.out.println("Interest Amount : " + interest);
-        account.setAccountBalance(account.getAccountBalance() + interest);
-        System.out.println("Account Balance: " + account.getAccountBalance());
+    public void addInterest(){
+        double interest = (this.getAccountBalance() * 1 * INTEREST_RATE);
+        System.out.println("Principal Amount : " + this.getAccountBalance());
+        System.out.println(String.format("Interest Amount : %8.2f", interest));
+        this.setAccountBalance(this.getAccountBalance() + interest);
+        System.out.println(String.format("Account Balance: %8.4f",this.getAccountBalance()));
     }
 
     //private
