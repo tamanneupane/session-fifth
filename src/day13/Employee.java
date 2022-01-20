@@ -23,7 +23,7 @@ public class Employee {
         return localDate;
     }
 
-    public double getSalary() {
+    public  double getSalary() {
         return salary;
     }
 
