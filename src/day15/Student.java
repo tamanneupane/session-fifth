@@ -20,20 +20,18 @@ public class Student{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return rollNumber == student.rollNumber && studentClass == student.studentClass;
+        return name.equalsIgnoreCase(student.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(rollNumber, studentClass);
+        return Objects.hash(name);
     }
 
     @Override
     public String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
-                ", rollNumber=" + rollNumber +
-                ", studentClass=" + studentClass +
                 '}';
     }
 }
