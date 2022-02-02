@@ -19,10 +19,12 @@ public class ExceptionPractice {
 
         try{
             myImage.getImageURL();
-            myImage.downloadImage("http://facebook.com/123451.png");
-        }catch (IndexOutOfBoundsException | IOException e){
+//            myImage.downloadImage("http://facebook.com/123451.png");
+        }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
             Logger.getGlobal().info(e.getMessage());
+        }finally {
+            Logger.getGlobal().info("Finally Called");
         }
     }
 }
