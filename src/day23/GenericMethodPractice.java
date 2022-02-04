@@ -13,6 +13,7 @@ public class GenericMethodPractice {
         printArray(fValues);
     }
 
+
     // This is called with integer and float array
     public static <T extends Number> void printArray(T[] values){
         for (T val : values) {
