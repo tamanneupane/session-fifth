@@ -2,7 +2,7 @@ package day26;
 
 import java.util.Objects;
 
-public class Student implements Comparable<Student> {
+public class Student {
 
     private String name;
     private int rollNumber;
@@ -33,8 +33,16 @@ public class Student implements Comparable<Student> {
                 '}';
     }
 
-    @Override
-    public int compareTo(Student o) {
-        return this.name.compareTo(o.name);
+    public String getName() {
+        return name;
     }
+
+    public int getRollNumber() {
+        return rollNumber;
+    }
+
+    //    @Override
+//    public int compareTo(Student o) {
+//        return this.name.compareTo(o.name);
+//    }
 }
